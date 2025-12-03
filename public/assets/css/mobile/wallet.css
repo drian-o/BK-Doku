@@ -1,0 +1,870 @@
+.bank-info {
+    background-color: #1e1e1e;
+    color: #888;
+    padding: 15px 10px;
+    border-radius: 5px;
+    --qrcode-size: 150px;
+}
+.bank-info h1,
+.bank-info h2,
+.bank-info h3,
+.bank-info h4 {
+    margin: 0;
+    word-break: break-all;
+}
+.bank-info h1,
+.bank-info h2,
+.bank-info h3 {
+    text-transform: uppercase;
+}
+.bank-info h1 {
+    font-size: 16px;
+}
+.bank-info h2 {
+    font-size: 20px;
+    color: #fff;
+}
+.bank-info h3 {
+    font-size: 14px;
+}
+.bank-info h4 {
+    text-align: center;
+    font-size: 12px;
+    margin: 10px auto 0 auto;
+    max-width: 75%;
+    word-break: break-word;
+    color: #95939e;
+}
+.bank-info h3,
+.bank-info h4 {
+    display: none;
+}
+.bank-info .bank-account-number-container {
+    display: flex;
+    align-items: center;
+}
+.bank-info [data-bank-info="header"] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.bank-info [data-bank-info="header"] img {
+    height: 20px;
+    width: auto;
+}
+.bank-info [data-bank-info="details"] {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.bank-info [data-bank-info="qrcode"] {
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.bank-info [data-bank-info="qrcode"]:empty {
+    display: none;
+}
+.bank-info [data-bank-info="qrcode"] img {
+    width: var(--qrcode-size);
+    margin: 10px 0;
+}
+.bank-info [data-bank-info="qrcode"] + span {
+    font-size: 12px;
+    text-align: center;
+}
+.bank-info hr {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #393939;
+    margin: 10px 0;
+    width: 100%;
+}
+.bank-info [data-bank-info="actions"] {
+    display: flex;
+    justify-content: flex-end;
+}
+.bank-info [data-bank-info="actions"] button {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.bank-info [data-bank-info="actions"] button + button {
+    margin-left: 10px;
+}
+.bank-info [data-bank-info="actions"] img {
+    width: auto;
+    height: 20px;
+}
+.bank-info [data-bank-info="actions"] .download-qr-code-button {
+    display: none;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #363346;
+    color: #fff;
+}
+.bank-info[data-high-priority="true"] [data-bank-info="header"] h1,
+.bank-info[data-high-priority="true"] [data-bank-info="details"],
+.bank-info[data-high-priority="true"] [data-bank-info="actions"] button,
+.bank-info[data-high-priority="true"] hr,
+.bank-info:not([data-high-priority="true"]) .recommended-for-instant-process {
+    display: none;
+}
+.bank-info[data-high-priority="true"] [data-bank-info="header"] img {
+    width: 150px;
+    height: auto;
+}
+.recommended-for-instant-process {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+.recommended-for-instant-process span {
+    margin-left: 5px;
+    font-weight: normal;
+    color: #fff;
+}
+.to-account-label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.available-payment-accounts-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.available-payment-accounts-popup.show {
+    display: block;
+}
+.available-payment-accounts-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 32px);
+    max-height: 80vh;
+    overflow: auto;
+    padding: 16px 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+.available-payment-accounts-container .available-payment-account-group-label {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding: 0 5px;
+}
+.available-payment-accounts-container
+    .available-payment-account-group-label:last-child {
+    display: none;
+}
+.available-payment-accounts-container
+    .available-payment-account-group-label:not(:first-child) {
+    margin-top: 30px;
+}
+.available-payment-accounts-container
+    .available-payment-account-group-label
+    span {
+    font-weight: 900;
+    color: #000;
+}
+.available-payment-accounts-container .available-payment-account-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-label,
+.available-payment-accounts-container
+    .available-payment-account-item[data-is-maintenance="true"]
+    .available-payment-account-label {
+    padding: 4px 8px;
+    border-radius: 20px;
+    background-color: #148e00;
+    color: #fff;
+    font-size: 10px;
+}
+.available-payment-accounts-container
+    .available-payment-account-item[data-is-maintenance="true"]
+    .available-payment-account-label {
+    background-color: #d7d7d7;
+    color: #474747;
+}
+.available-payment-accounts-container
+    .available-payment-account-item[data-is-maintenance="true"]
+    .available-payment-account-status {
+    background-color: #f00;
+}
+.available-payment-accounts-container
+    .available-payment-account-item[data-is-maintenance="true"]
+    .available-payment-account-logo,
+.available-payment-accounts-container
+    .available-payment-account-item[data-is-maintenance="true"]
+    .available-payment-account-info {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-status {
+    flex-basis: 10%;
+    max-width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #12b612;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-status[data-is-online="false"] {
+    background-color: #f00;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-info,
+.available-payment-accounts-container
+    .available-payment-account-footer
+    .available-payment-account-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    word-break: break-word;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-info
+    .available-payment-account-name,
+.available-payment-accounts-container
+    .available-payment-account-footer
+    .available-payment-account-info {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-info
+    .available-payment-account-sub-info {
+    font-size: 10px;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-info
+    .available-payment-account-name
+    > br {
+    display: none;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-logo,
+.available-payment-accounts-container
+    .available-payment-account-footer
+    .available-payment-account-logo {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .last-used-account {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    background: #bababa;
+    color: #626262;
+    border-radius: 4px;
+    padding: 2px 4px 2px 4px;
+    font-size: 8px;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-action
+    .available-payment-account-checkbox {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #d7d7d7;
+    position: relative;
+}
+.available-payment-accounts-container
+    .available-payment-account-item
+    .available-payment-account-action
+    .available-payment-account-checkbox.checked:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 50%;
+    background: #736d99;
+}
+.available-payment-accounts-container .available-payment-account-footer {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 20px 10px 40px;
+    background-color: #e8eaeb;
+    margin-top: 10px;
+}
+.available-payment-accounts-container
+    .available-payment-account-footer
+    .new-payment-account-icon-container {
+    font-size: 25px;
+    color: #1b192e;
+}
+.available-payment-accounts-container .popup-loader-container.display {
+    display: flex;
+}
+.available-payment-accounts-container .payment-account-container.display {
+    display: block;
+}
+.available-payment-accounts-container .popup-loader-container {
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+.available-payment-accounts-container .popup-loader-container,
+.available-payment-accounts-container .payment-account-container {
+    display: none;
+}
+.available-payment-accounts-container .payment-account-container form label {
+    color: #000;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .form-control
+    option {
+    background-color: initial;
+}
+.available-payment-accounts-container .payment-account-container .form-control {
+    background: #e8eaeb;
+    border-radius: 4px;
+    padding: 12px;
+    height: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06) inset;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06) inset;
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06) inset;
+    border: 0;
+    color: #393939;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .form-control
+    option {
+    background-color: initial;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .otp-container {
+    border-top: 1px solid #bbb;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .otp-container
+    .request-otp-button {
+    margin-top: 10px;
+    padding: 12px 18px;
+    border-radius: 25px;
+    white-space: initial;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .otp-container
+    .request-otp-button[disabled] {
+    background: #000;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .otp-container
+    .contact-verification-link {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    line-height: 1.1;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .standard-button-group {
+    text-align: right;
+}
+.available-payment-accounts-container .payment-account-container .btn {
+    border-radius: 25px;
+    padding: 12px 18px;
+    font-size: 14px;
+}
+.available-payment-accounts-container .payment-account-container .btn-primary {
+    color: #fff;
+    border: 0;
+    background: #1b192e;
+}
+.available-payment-accounts-container
+    .payment-account-container
+    .btn-primary:hover {
+    color: #fff;
+    background: #47427a;
+}
+.available-payment-accounts-container .close-button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+}
+.payment-method-selection {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+.payment-method-selection > div {
+    width: 100%;
+    min-width: calc((100% - 8px * 4) / 5);
+    display: flex;
+    flex-direction: column;
+}
+.payment-method-selection input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+.payment-method-selection.payment-method-selection label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    height: 90%;
+    text-transform: capitalize;
+}
+.payment-method-selection label img {
+    width: 25px;
+}
+.payment-method-selection label span {
+    max-width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.payment-method-selection input[type="radio"] + label {
+    color: #000;
+}
+.payment-method-selection input[type="radio"]:checked + label {
+    background-color: #f7a103;
+    background-image: linear-gradient(to right, #f7a103 0%, #ff6c00 100%);
+    color: #fff;
+}
+.payment-method-selection input[type="radio"]:checked + label img {
+    filter: brightness(0) invert(1);
+}
+.payment-method-selection input[type="radio"]:disabled + label {
+    display: none;
+}
+.payment-maintenance-container,
+.remarks-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    background: #cbcbcb;
+    color: #000;
+    font-size: 14px;
+}
+.payment-maintenance-container i,
+.remarks-container i {
+    border-radius: 50%;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    color: #fff;
+    border: 1px solid #fff;
+    font-style: normal;
+    display: block;
+    text-align: center;
+}
+.remarks-container {
+    border: 1px dotted #ff7900;
+    background: rgba(255, 0, 0, 0.09);
+    margin-top: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+.remarks-container i {
+    background-color: transparent;
+    border-color: #ff7900;
+    color: #ff7900;
+}
+.player-account-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+.player-account-container .player-account-input {
+    flex-basis: calc(100% - 42px);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.player-account-container .player-account-add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #444;
+    color: #fff;
+}
+.standard-form-container.deposit-container {
+    color: #fff;
+    background: none;
+    margin: 16px 0;
+}
+.standard-form-container.deposit-container label {
+    color: #fff;
+    font-weight: bold;
+}
+.deposit-container {
+    padding: 10px 0;
+}
+.deposit-container hr.deposit-gap {
+    margin: 0 0 5px 0;
+    height: 1px;
+    border: none;
+    background: -webkit-gradient(
+        linear,
+        0 0,
+        100% 0,
+        from(transparent),
+        to(transparent),
+        color-stop(50%, #fff)
+    );
+}
+.deposit-container .admin-fee-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffb82e;
+    font-size: 14px;
+    font-weight: bold;
+}
+.deposit-container .copy-bank-account-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #fff;
+}
+.deposit-container .copy-bank-account-button img {
+    margin: -5px 0 0 10px;
+}
+.deposit-container .reveal-bank-account-button {
+    font-size: 10px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+}
+.deposit-container .serial-number-deposit-note {
+    margin-top: 10px;
+}
+.deposit-container label + label {
+    margin-left: 10px;
+}
+.deposit-container select.input-validation-error {
+    color: transparent;
+}
+.deposit-container .deposit-form-group {
+    background-color: transparent;
+    padding: 10px 0;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+.deposit-container .deposit-form-group .form-control {
+    background-color: #0c0c0c;
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+}
+.deposit-container .deposit-form-group .form-group:last-child {
+    margin-bottom: 0;
+}
+.deposit-container .standard-secondary-button {
+    width: 100%;
+}
+.bank-status-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin: -15px 0 20px;
+}
+.bank-status-list li + li {
+    margin-left: 5px;
+}
+.bank-status-list [data-online] {
+    display: flex;
+    flex-direction: row;
+    background-color: #222;
+    padding: 8px 8px 8px 5px;
+    border-radius: 5px;
+}
+.bank-status-list [data-online]:before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.bank-status-list [data-online="true"]:before {
+    background-color: #0f0;
+}
+.bank-status-list [data-online="false"]:before {
+    background-color: #e00;
+}
+.bank-status-list [data-online] img {
+    max-height: 27px;
+    width: 51px;
+}
+.deposit-amount-container input[type="text"] {
+    background-color: #000;
+}
+.deposit-amount-container [data-section="depo-amount"] {
+    display: flex;
+    margin-bottom: 10px;
+}
+.deposit-amount-container [data-section="depo-amount"] [data-field="amount"] {
+    flex-basis: 50%;
+}
+.deposit-amount-container
+    [data-section="depo-amount"]
+    [data-field="reference-number"]
+    input {
+    width: 60px;
+    background-color: #6a6a6a;
+    border-bottom-color: #6a6a6a;
+}
+.deposit-amount-container [data-section="depo-amount"] [data-field="copy"] {
+    width: 35px;
+}
+.deposit-amount-container [data-section="depo-amount"] input {
+    width: 100%;
+}
+.deposit-amount-container
+    [data-section="depo-amount"]
+    .standard-required-message {
+    white-space: nowrap;
+}
+.deposit-amount-container .real-deposit-amount {
+    font-size: 24px;
+    line-height: 1;
+    flex-basis: 60%;
+    text-align: right;
+    word-break: break-all;
+}
+.deposit-amount-container .real-deposit-amount span {
+    font-size: 12px;
+    vertical-align: top;
+}
+.deposit-amount-container .real-deposit-amount:before {
+    content: attr(data-title);
+    display: block;
+    font-size: 14px;
+    margin: 0;
+}
+.deposit-amount-container .fast-deposit-note {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.15;
+}
+.deposit-note {
+    display: flex;
+    align-items: stretch;
+}
+.deposit-note-icon {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #787880, #42424f);
+}
+.deposit-note-icon img {
+    width: 35px;
+}
+.deposit-note-content {
+    flex-basis: 80%;
+    background-color: #cbcbcb;
+    color: #363565;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.deposit-note ul {
+    padding-left: 25px;
+}
+.deposit-note ul li {
+    list-style: decimal;
+}
+.balance-info-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.balance-info-container > a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.balance-info-container .total-balance {
+    text-align: right;
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 8px;
+}
+.balance-info-container .total-balance > p {
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+}
+.balance-info-container .total-balance > span {
+    color: #4cb998;
+}
+.deposit-confirmation-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.deposit-amount-range {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #fff;
+}
+.deposit-amount-range span:not(:empty):before {
+    content: attr(data-title);
+}
+.deposit-amount-range span:not(:empty) + span:not(:empty):before {
+    content: " | " attr(data-title);
+}
+.deposit-summary-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #242424;
+}
+.deposit-summary-container .deposit-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #242424;
+    color: #fff;
+}
+.deposit-summary-container .deposit-summary-header .summary-transfer-amount {
+    flex-grow: 1;
+    margin-right: 5px;
+    text-align: right;
+    font-weight: bold;
+    color: #0f0;
+}
+.deposit-summary-container .deposit-summary-header .toggler {
+    font-size: 12px;
+}
+.deposit-summary-container .deposit-summary-content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #000;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.deposit-summary-container .deposit-summary-content.expand {
+    display: flex;
+}
+.deposit-summary-container .deposit-summary-content .deposit-summary-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.deposit-summary-container
+    .deposit-summary-content
+    .deposit-summary-body
+    .deposit-summary-title {
+    color: #fff;
+    font-weight: bold;
+}
+.deposit-summary-container
+    .deposit-summary-content
+    .deposit-summary-body
+    .deposit-detail-container
+    .deposit-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.deposit-summary-container
+    .deposit-summary-content
+    .deposit-summary-body
+    .deposit-detail-container
+    .deposit-detail-item {
+    flex-basis: calc((100% - 5px) / 2);
+    color: #dbdbdb;
+}
+.deposit-summary-container .deposit-summary-content .deposit-summary-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    color: #fff;
+    border-top: 1px solid #242424;
+}
+.deposit-summary-container .transfer-amount {
+    max-width: 50%;
+    word-break: break-all;
+}
+.transaction-receipt-input-container {
+    position: relative;
+}
+.transaction-receipt-input-container .upload-success-indicator {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #1adb05;
+}

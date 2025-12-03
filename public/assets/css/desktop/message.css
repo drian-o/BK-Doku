@@ -1,0 +1,580 @@
+.message-detail-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.message-detail-title a,
+.message-detail-title a:hover {
+    text-decoration: none;
+}
+.message-detail-title a {
+    color: inherit;
+}
+.message-detail-title > div:first-child,
+.message-detail-title > div:last-child {
+    flex-basis: 15%;
+}
+.message-detail-title > div:last-child {
+    text-align: right;
+}
+.message-detail-title > div:last-child span {
+    margin-right: 5px;
+}
+.replied-message {
+    color: #858585;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d6d5d5;
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+.replied-message .replied-message-content {
+    padding: 10px 15px;
+    white-space: pre-wrap;
+}
+.replied-message .replied-message-content pre {
+    word-break: break-word;
+    text-align: justify;
+}
+.replied-message[data-creator="true"] {
+    text-align: right;
+}
+.replied-message[data-creator="true"] .replied-message-content {
+    background-color: #1a1629;
+}
+.replied-message[data-message-type="announcement"] {
+    color: #fff;
+}
+.replied-message[data-message-type="announcement"] .notification-header {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+}
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7ebaed;
+    border-radius: 10px;
+}
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="PEN"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="NEW"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="PEN"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="NEW"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="LogResetPasswordForgotPassword"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="LogResetPasswordChangePassword"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="LogResetPasswordPassword"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="LogResetPasswordAPKPassword"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="LogResetPasswordChangeMobilePassword"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="HasActiveCoupon"] {
+    background-color: #f5f164;
+}
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="REJ"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="FAIL"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="REJ"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="FAIL"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-category="Announcement"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-category="Notification"] {
+    background-color: #e5949e;
+}
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="APP"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="APP"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="ClaimBonus"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="ClaimCommission"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="ClaimCashback"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="ClaimCombinePromo"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="NewBonus"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="NewCommission"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="NewCashback"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="NewCombinePromo"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="ClaimPreBonusOnGoing"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="ClaimPreBonusComplete"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="ClaimedCoupon"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="WlbCoupon"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="RankedUpLoyaltyLevel"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="LuckyDraw"],
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image[data-message-subcategory="RedemptionStoreCoupon"] {
+    background-color: #76cb79;
+}
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-image
+    img {
+    width: 50px;
+    height: 50px;
+}
+.replied-message[data-message-type="announcement"]
+    .notification-header
+    .notification-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+.message-table {
+    line-height: 24px;
+    color: #d5d5d5;
+}
+.message-table a,
+.message-table a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.message-table input[type="checkbox"],
+.message-table label {
+    cursor: pointer;
+    font-weight: normal;
+    margin: 0;
+}
+.message-table label {
+    display: flex;
+    align-items: center;
+}
+.message-table-header,
+.message-table-body {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+.message-table-header .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.message-table-header .buttons-container a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    font-weight: bold;
+    color: #d5d5d5;
+}
+.message-table-header .buttons-container a img {
+    margin-right: 5px;
+}
+.message-table-header .buttons-container a + a {
+    margin-left: 10px;
+}
+.message-table-header .buttons-container a:hover {
+    background-color: #870e6c;
+    color: #fff;
+}
+.message-table-body [data-seen="false"] {
+    font-weight: bold;
+}
+.message-table .checkbox-column,
+.message-table .message-column {
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.message-table-body .checkbox-column,
+.message-table-body .message-column {
+    padding: 15px 0;
+    border-top: 1px solid #db1acb;
+}
+.message-table .checkbox-column input[type="checkbox"] {
+    margin: 0 10px;
+}
+.message-table .message-column {
+    justify-content: space-between;
+}
+.message-table .created-date:first-child {
+    margin-left: auto;
+}
+.notification-tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.notification-tabs .notification-tab-item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+.notification-tabs .notification-tab-item[data-active="true"] {
+    background-color: #f7a103;
+    background-image: linear-gradient(to right, #f7a103 0%, #ff6c00 100%);
+}
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+.notification-list .notification-item {
+    display: flex;
+    gap: 15px;
+    padding: 20px 10px;
+    background-color: transparent;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+.notification-list .notification-item[data-seen="false"] {
+    background-color: #333;
+}
+.notification-list .notification-item .notification-image {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7ebaed;
+    border-radius: 10px;
+}
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="PEN"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="NEW"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="PEN"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="NEW"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="LogResetPasswordForgotPassword"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="LogResetPasswordChangePassword"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="LogResetPasswordPassword"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="LogResetPasswordAPKPassword"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="LogResetPasswordChangeMobilePassword"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="HasActiveCoupon"] {
+    background-color: #f5f164;
+}
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="REJ"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="FAIL"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="REJ"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="FAIL"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-category="Announcement"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-category="Notification"] {
+    background-color: #e5949e;
+}
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Deposit"][data-transaction-status="APP"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="Withdrawal"][data-transaction-status="APP"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="ClaimBonus"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="ClaimCommission"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="ClaimCashback"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="ClaimCombinePromo"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="NewBonus"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="NewCommission"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="NewCashback"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="NewCombinePromo"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="ClaimPreBonusOnGoing"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="ClaimPreBonusComplete"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="ClaimedCoupon"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="WlbCoupon"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="RankedUpLoyaltyLevel"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="LuckyDraw"],
+.notification-list
+    .notification-item
+    .notification-image[data-message-subcategory="RedemptionStoreCoupon"] {
+    background-color: #76cb79;
+}
+.notification-list .notification-item .notification-image img {
+    width: 50px;
+    height: 50px;
+}
+.notification-list .notification-item .notification-image img {
+    width: 50px;
+    height: 50px;
+}
+.notification-list
+    .notification-item[data-seen="false"]
+    .notification-image:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    background: #fc1818;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.notification-list .notification-item .notification-content {
+    width: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+.notification-list
+    .notification-item
+    .notification-content
+    .notification-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #fff;
+}
+.notification-list
+    .notification-item
+    .notification-content
+    .notification-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+.notification-list .notification-item .notification-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+.notification-popup-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+.notification-popup-body .notification-popup-title {
+    padding: 0 10px;
+    font-size: 24px;
+}
+.notification-popup-body .notification-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+}
+.notification-popup-body .notification-tabs .notification-tab-item {
+    flex-grow: 1;
+    border-radius: 0;
+    background: none;
+    border-bottom: 2px solid #555;
+    color: #fff;
+}
+.notification-popup-body
+    .notification-tabs
+    .notification-tab-item[data-active="true"] {
+    border-bottom: 2px solid #fff;
+    background: none;
+}
+.notification-popup-body
+    .notification-tabs
+    .notification-tab-item[data-count]
+    span {
+    position: relative;
+}
+.notification-popup-body
+    .notification-tabs
+    .notification-tab-item[data-count]
+    span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(15px, 50%);
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    border-radius: 50%;
+}
+.notification-popup-body
+    .notification-tabs
+    .notification-tab-item[data-count="0"]
+    span:after {
+    display: none;
+}
+.notification-popup-body > .notification-content {
+    flex-grow: 1;
+    height: 80vh;
+    overflow: auto;
+}
+.notification-popup-body .notification-list {
+    margin-top: 0;
+    gap: 0;
+}
+.notification-popup-body .notification-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background: #000;
+    border-top: 1px solid #555;
+}
+.notification-popup-body .notification-footer a {
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.notification-popup-body ::-webkit-scrollbar {
+    width: 7px;
+}
+.notification-popup-body ::-webkit-scrollbar-track {
+    background: transparent;
+}
+.notification-popup-body ::-webkit-scrollbar-thumb {
+    background: #58585a;
+    border-radius: 5px;
+}
+.empty-notification-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty-notification-container .empty-notification-image {
+    background-color: #333;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 20px;
+}
+.empty-notification-container .empty-notification-image img {
+    width: 128px;
+    height: 128px;
+    margin-left: -10px;
+}
+.empty-notification-container .empty-notification-content {
+    text-align: center;
+}
+.empty-notification-container .empty-notification-content h3,
+.empty-notification-container .empty-notification-content p {
+    color: #fff;
+}

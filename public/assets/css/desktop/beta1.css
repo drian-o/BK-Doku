@@ -1,0 +1,385 @@
+.tickercontainer {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+.tickercontainer .mask {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    overflow: hidden;
+}
+ul.newsticker {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+ul.newsticker li {
+    margin: 0;
+    font-size: 12px;
+    padding: 0 25px 0 0;
+    white-space: nowrap;
+}
+ul.er-controls {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+ul.er-controls > li {
+    display: inline-block;
+    padding: 0 10px;
+    background: #f0f0f0;
+    margin: 5px;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+}
+ul.er-controls > li:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+.announcement-outer-container {
+    background-color: #221c3e;
+    padding: 6px 0;
+    color: #fff;
+    font-family: "latobold";
+}
+.announcement-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.announcement-container > [data-section="date"] {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+.announcement-container [data-icon="news"] {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    background: center no-repeat;
+    background-size: contain;
+    background-image: var(--image-src);
+    margin-right: 10px;
+}
+.announcement-container > [data-section="announcements"] {
+    flex-basis: 70%;
+    background-color: #090710;
+    border-radius: 20px;
+    padding: 5px 25px;
+    overflow: hidden;
+}
+.banner,
+.banner .slick-slide img {
+    aspect-ratio: 1920/613;
+}
+.banner-carousel {
+    height: 422px;
+    visibility: hidden;
+    opacity: 0;
+}
+.banner-carousel.slick-initialized {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+}
+.carousel-indicators .slick-active {
+    background: #ff7200;
+    border-color: #ff7200;
+}
+.carousel-indicators li {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.banner .carousel-indicators li button {
+    display: none;
+}
+.banner .slick-slide img {
+    display: block;
+    height: auto;
+    width: 100%;
+    line-height: 1;
+}
+.banner-group-vertical .carousel-indicators {
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 25px;
+    left: unset;
+    width: 20px;
+}
+.banner-group-vertical .carousel-indicators li {
+    display: block;
+    margin-bottom: 2px;
+}
+.home-progressive-jackpot {
+    background: center no-repeat;
+    background-size: contain;
+    background-image: var(--image-src);
+    font-family: "Open24DisplaySt";
+    font-size: 60px;
+    color: #fff;
+    padding-top: calc(100% * 186 / 1264);
+    width: 100%;
+    position: relative;
+}
+.home-progressive-jackpot .jackpot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: calc(100% * 0.01);
+    padding-left: 330px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    letter-spacing: 10px;
+    gap: 20px;
+}
+.home-progressive-jackpot .jackpot-currency {
+    color: #894bc8;
+    margin-right: 10px;
+}
+.home-outer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.home-inner-container {
+    background-color: rgba(22, 18, 40, 0.83);
+    padding: 30px;
+    border-radius: 30px;
+}
+.popular-game-title-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    color: #fff;
+}
+.popular-game-title-container .title {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.popular-game-title-container .title i {
+    display: inline-block;
+    height: 24px;
+    width: 25px;
+    background: center no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+.popular-game-title-container .title i[data-icon] {
+    background-image: var(--image-src);
+}
+.popular-game-title-container > i {
+    border-bottom: 2px solid #451e58;
+    border-top: 2px solid #0d0d0d;
+    flex-grow: 1;
+    margin: 0 15px;
+}
+.popular-game-title-container a {
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 25px;
+    font-size: 15px;
+    background-color: #4e3c69;
+    color: #fff;
+}
+.popular-game-title-container + .game-list-container {
+    background-color: #0a0813;
+    border: 2px solid #322547;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+.popular-game-title-container + .game-list-container .game-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.popular-game-title-container + .game-list-container .game-list .game-item {
+    flex-shrink: 0;
+    position: relative;
+}
+.popular-game-title-container
+    + .game-list-container
+    .game-list::-webkit-scrollbar {
+    height: 7px;
+}
+.popular-game-title-container
+    + .game-list-container
+    .game-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.popular-game-title-container
+    + .game-list-container
+    .game-list::-webkit-scrollbar-thumb {
+    background: #58585a;
+    border-radius: 5px;
+}
+.popular-game-title-container + .game-list-container .game-list .games-group {
+    width: calc((100% - 6px * 5) / 6.5);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 3px;
+}
+.popular-game-title-container
+    + .game-list-container
+    .game-list
+    .games-group
+    .game-item {
+    width: 100%;
+    margin: 0;
+}
+.download-apk-container {
+    overflow: hidden;
+}
+.download-apk-container .popup-modal[data-title] .modal-title:before {
+    content: none;
+}
+.download-apk-container .popup-modal .modal-header h4 {
+    font-size: 24px;
+}
+.download-apk-container .popup-modal .modal-body img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+.download-apk-container .popup-modal .modal-body h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: inherit;
+}
+.download-apk-container .popup-modal .modal-body ol {
+    list-style: decimal;
+    padding-left: 5px;
+}
+.download-apk {
+    display: flex;
+    align-items: center;
+    font-family: Arial;
+    color: #fff;
+    background: var(--image-src);
+    background-size: cover;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.download-apk > div {
+    opacity: 0;
+    transition: all 1s ease;
+}
+.download-apk > div:nth-child(1) {
+    flex-basis: 50%;
+    align-self: flex-end;
+    transform: translateX(-100%);
+    padding: 30px 0 30px 50px;
+}
+.download-apk > div:nth-child(2) {
+    flex-basis: 50%;
+    align-self: flex-end;
+    transform: translateX(100%);
+}
+.download-apk .h2 {
+    font-family: Arial;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.download-apk .h2 > span {
+    display: block;
+    color: #f58e00;
+}
+.download-apk .h3 {
+    font-weight: 100;
+    font-size: 15px;
+    margin: 0;
+}
+.download-apk-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.download-apk-info .download-apk-section {
+    flex-basis: 50%;
+}
+.download-apk-section {
+    display: flex;
+    font-weight: 600;
+    font-size: 16px;
+}
+.download-apk-section > * {
+    margin: 0 10px 10px 0;
+}
+.download-apk-section i {
+    color: #f69c00;
+    font-style: normal;
+}
+.download-apk-qr-code img {
+    max-width: 94px;
+}
+.download-apk-detail {
+    text-align: left;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.standard-container-with-sidebar
+    .standard-form-content
+    .download-apk-container {
+    margin-top: 30px;
+    padding: 0;
+}
+.standard-container-with-sidebar
+    .standard-form-content
+    .download-apk-container
+    .download-apk
+    > div:nth-child(1) {
+    padding: 15px 0 15px 50px;
+}
+.standard-container-with-sidebar
+    .standard-form-content
+    .download-apk-container
+    .download-apk
+    .h2 {
+    font-size: 27px;
+    line-height: 27px;
+}
+.standard-container-with-sidebar
+    .standard-form-content
+    .download-apk-container
+    .download-apk
+    .h3 {
+    font-size: 14px;
+}
+.standard-container-with-sidebar
+    .standard-form-content
+    .download-apk-container
+    .download-apk-info {
+    margin: 10px 0;
+}
+.standard-container-with-sidebar
+    .standard-form-content
+    .download-apk-container
+    .download-apk-detail {
+    font-size: 10px;
+}
+.download-popup-modal .modal-body img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}

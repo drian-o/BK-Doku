@@ -1,0 +1,278 @@
+body[data-route="profile"] {
+    background-color: #0a0814;
+}
+body[data-route="profile"] .standard-form-container,
+body[data-route="bank-account"] .standard-form-container {
+    background: #230f2a;
+}
+.last-transaction-container {
+    font-size: 14px;
+    color: #fff;
+}
+.last-transaction-container .section-heading {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #f40083;
+}
+.last-transaction-container .table-bordered,
+.last-transaction-container .table-bordered > thead > tr > th,
+.last-transaction-container .table-bordered > tbody > tr > td {
+    border: 1px solid #632451;
+}
+.profile-container .username-field {
+    color: #fff;
+}
+.profile-container .mobile-app-note {
+    margin-top: 30px;
+}
+.profile-container .mobile-info-button {
+    border: 1px solid #f60081;
+    border-radius: 5px;
+    padding: 8px 45px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: #f60081;
+}
+.profile-container .mobile-info-button:hover {
+    background-color: #c1146f;
+    color: #fff;
+}
+.profile-container .mobile-info-button i {
+    margin-right: 5px;
+}
+.bank-account-item {
+    background-color: #431435;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px;
+    margin: 20px 0;
+}
+form + .bank-account-item {
+    margin-top: 50px;
+}
+.standard-content-info .referral-field label {
+    display: block;
+}
+.standard-content-info .referral-code-container {
+    border: 1px dashed #ff9600;
+    background-color: #4a2d0a;
+    color: #ff9600;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    overflow-wrap: break-word;
+    width: fit-content;
+    max-width: 100%;
+}
+.standard-content-info h2 {
+    color: #f99702;
+    margin: 20px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.standard-content-info table {
+    border: 1px solid #242424;
+    color: #fff;
+}
+.standard-content-info table thead {
+    background-color: #242424;
+}
+.standard-content-info table thead th {
+    font-weight: normal;
+}
+.standard-content-info table thead th,
+.standard-content-info table tbody td {
+    border: 0;
+}
+.standard-content-info table .empty {
+    text-align: center;
+}
+.standard-content-info .standard-content-block {
+    background-color: #1a1a1a;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.standard-content-info .standard-inline-form-group {
+    gap: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 15px 0;
+}
+.standard-content-info .standard-inline-form-group label {
+    text-align: right;
+    flex-grow: 1;
+    margin: 0;
+}
+.standard-content-info .standard-inline-form-group [data-section="display"] {
+    width: 50%;
+    flex-shrink: 0;
+}
+.standard-content-info .standard-inline-form-group label,
+.standard-content-info .standard-inline-form-group [data-section="display"],
+.standard-form-container .referral-field label {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.profile-summary-table th {
+    text-align: right;
+    font-weight: normal;
+}
+.profile-summary-table td {
+    word-break: break-word;
+}
+.profile-summary-table th,
+.profile-summary-table td {
+    color: #fff;
+    text-transform: uppercase;
+}
+.profile-summary-table.table,
+.profile-summary-table.table th,
+.profile-summary-table.table td {
+    border: none;
+    vertical-align: middle;
+}
+.profile-summary-table .warning {
+    background-color: #f00;
+    color: #fff;
+    font-size: smaller;
+    text-transform: none;
+    padding: 5px;
+    display: block;
+}
+.profile-summary-table .warning img {
+    height: 16px;
+    width: auto;
+}
+.banking-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.banking-details-header label {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.banking-details-header a {
+    background-color: #808080;
+    border-radius: 5px;
+    padding: 2px 2px 6px 4px;
+}
+.banking-details-header a img {
+    height: 20px;
+    width: auto;
+}
+.bank-info-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.bank-info-container .carousel-inner {
+    text-align: initial;
+}
+.bank-info-container .carousel-inner > .bank-info-block.next,
+.bank-info-container .carousel-inner > .bank-info-block.prev {
+    width: calc(100% - 10px);
+}
+.bank-info-container .carousel-indicators {
+    position: static;
+    width: 100%;
+    margin: 10px 0;
+}
+.bank-info-container .carousel-indicators li {
+    display: inline-block;
+    width: 17px;
+    height: 4px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+}
+.bank-info-container .carousel-indicators .active {
+    background-color: #ff9600;
+}
+.bank-info-block {
+    background-color: #3e3e3e;
+    color: #fff;
+    margin: 0 5px;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+.bank-info-block .account-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 25px;
+}
+.bank-info-block .account-name img {
+    height: 20px;
+    width: auto;
+}
+.bank-info-block .account-number,
+.bank-info-block hr,
+.bank-info-block .bank-name {
+    display: block;
+}
+.bank-info-block .account-number {
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+.bank-info-block hr {
+    border-top: 1px solid #2e2e2e;
+    border-bottom: 1px solid #434343;
+    margin: 10px 0;
+}
+.bank-info-block .bank-name {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.last-transaction-table {
+    border: 1px solid #0a1849;
+    color: #fff;
+}
+.last-transaction-table thead {
+    background-color: #0a1849;
+}
+.last-transaction-table thead th {
+    font-weight: normal;
+}
+.standard-content-info .last-transaction-table thead th,
+.standard-content-info .last-transaction-table tbody td {
+    border: 0;
+}
+.last-transaction-table .empty {
+    text-align: center;
+}
+.last-transaction-table [data-ticket-status] {
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin: 4px 0 0;
+    font-weight: normal;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #808080;
+}
+.last-transaction-table [data-ticket-status="REJ"] {
+    background-color: #ff3838;
+}
+.last-transaction-table [data-ticket-status="APP"] {
+    background-color: #56f000;
+}
+.last-transaction-table [data-ticket-status="PEN"] {
+    background-color: #999;
+}
+.last-transaction-table [data-ticket-status="FAI"] {
+    background-color: #ffb302;
+}

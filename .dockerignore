@@ -1,0 +1,8 @@
+# Masukkan ini ke file .dockerignore
+.git
+.gitignore
+.env
+/node_modules
+/vendor
+/storage
+/public/hot

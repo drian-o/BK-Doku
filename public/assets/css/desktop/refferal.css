@@ -1,0 +1,300 @@
+.referral-container a {
+    text-decoration: none;
+}
+.referral-container a:hover {
+    color: #faa301;
+    cursor: pointer;
+}
+#referral-qr-code img {
+    width: 80%;
+    margin: 0 auto 10px;
+}
+.referral-code-container {
+    border: 1px dashed #23527c;
+    padding: 5px;
+    margin: 20px auto;
+    text-align: center;
+    width: 50%;
+    text-decoration: none;
+}
+.copy-input-button i {
+    padding: 10px;
+    font-size: large;
+}
+.referral-box {
+    background-color: #292929;
+    padding: 10px;
+    text-align: center;
+    min-height: 100px;
+}
+.referral-status-box {
+    min-height: inherit;
+}
+.referral-status-box > span[data-status="New"],
+.referral-status-box > span[data-status="Active"] {
+    color: #008000;
+    text-transform: uppercase;
+}
+.referral-status-box > span[data-status="Suspended"],
+.referral-status-box > span[data-status="Inactive"] {
+    color: #f00;
+    text-transform: uppercase;
+}
+.change-referral-code {
+    text-align: right;
+    margin-top: 5px;
+}
+.referral-feature-container .standard-button-group a {
+    min-width: 200px;
+    max-width: 50%;
+    margin: 20px auto;
+    border-radius: 0;
+    padding: 8px 10px;
+    color: #fff;
+}
+.referral-feature-container .standard-button-group a:hover {
+    color: #fff;
+}
+.referral-banner-container img {
+    width: 100%;
+    height: auto;
+}
+.referral-guidance-note {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #fff;
+}
+.referral-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.referral-features .referral-features-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #222020;
+}
+.referral-features .referral-features-item .feature-icon {
+    flex-basis: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.referral-features .referral-features-item .feature-icon > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #f7a103 0%, #ff6c00 100%);
+}
+.referral-features .referral-features-item .feature-info {
+    flex-basis: calc(90% - 60px);
+}
+.referral-features .referral-features-item .feature-info span {
+    font-size: 14px;
+    color: #fff;
+}
+.referral-features .referral-features-item .feature-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #faa301;
+}
+.referral-verification-container ol {
+    list-style-type: decimal;
+}
+.referral-verification-container input.form-control {
+    border-color: #333;
+}
+.referral-verification-container .standard-button-group input[type="submit"] {
+    min-width: 150px;
+    max-width: 50%;
+    border-radius: 5px;
+}
+.referral-verification-container
+    .standard-button-group
+    input[type="submit"]:disabled {
+    background: linear-gradient(to bottom, #87867f, #323232);
+    color: #fff;
+    cursor: not-allowed;
+}
+.referral-verification-container
+    .standard-inline-form-group
+    [data-is-verified] {
+    color: #0f0;
+}
+.referral-verification-container
+    .standard-inline-form-group
+    [data-is-verified="false"] {
+    color: #f00;
+}
+.referral-verification-container .terms-conditions-container h3,
+.referral-verification-container .terms-conditions-container ol li {
+    color: #fff;
+}
+.referral-verification-container .terms-conditions-container h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+}
+.referral-verification-container .terms-conditions-container ol {
+    list-style-type: decimal;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+.referral-verification-container .terms-conditions-container ol li {
+    margin-left: 15px;
+    font-size: 14px;
+}
+.referral-verification-container .terms-conditions-container ol li + li {
+    margin-top: 10px;
+}
+.referral-verification-container .verification-footer {
+    display: flex;
+    align-items: center;
+}
+.referral-verification-container .verification-footer picture {
+    width: 30%;
+}
+.referral-verification-container .verification-footer picture img {
+    width: 100%;
+    height: auto;
+}
+.referral-verification-container .verification-footer .line {
+    width: 100%;
+    height: 2px;
+    background-color: #858585;
+}
+.referral-verification-container [data-is-contact-verified="false"] {
+    position: relative;
+    padding: 10px;
+}
+.referral-verification-container [data-is-contact-verified="false"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.referral-verification-container
+    [data-is-contact-verified="true"]
+    .profile-link {
+    display: none;
+}
+.referral-verification-container
+    [data-is-contact-verified="false"]
+    .profile-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #f7a103 0%, #ff6c00 100%);
+    color: #fff;
+}
+.referral-verification-container
+    [data-is-contact-verified="false"]
+    .profile-link:hover {
+    background: linear-gradient(to bottom, #ff6c00 0%, #f7a103 100%);
+}
+.pending-verification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.pending-verification-container .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f99702;
+}
+.pending-verification-container .icon-container img {
+    width: 100px;
+    height: 100px;
+}
+.pending-verification-container h2 {
+    font-size: 20px;
+    color: #fff;
+}
+.pending-verification-container p {
+    font-size: 14px;
+    color: #f99702;
+}
+.update-verification-note-container {
+    margin-top: 20px;
+}
+.update-verification-note-container .update-verification-note {
+    color: #f00;
+}
+.referral-verification-container
+    [data-is-contact-verified="true"]
+    .verify-whatsapp-popup {
+    display: none;
+}
+.verify-whatsapp-popup {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 75%;
+    padding: 25px 10px;
+    border-radius: 8px;
+    background-color: #171717;
+}
+.verify-whatsapp-popup p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+.verify-whatsapp-popup p span[data-is-verified="false"] {
+    color: #f00;
+}
+.whitelisted-domains-container .standard-reporting-control-group label {
+    white-space: nowrap;
+}
+.whitelisted-domains-container
+    .standard-reporting-control-group
+    [data-section="input"] {
+    min-width: 350px;
+}
+.whitelisted-domains-container .standard-reporting-control-group .form-control {
+    width: 100%;
+}
+.whitelisted-domains-container .standard-reporting-control-group button {
+    margin-left: 25px;
+}
+.whitelisted-domain-table .standard-button-group {
+    margin-bottom: 0;
+    text-align: left;
+}
+.whitelisted-domain-table .standard-button-group button {
+    padding: 2px 10px;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+.whitelisted-domains-link {
+    margin: 10px 0;
+}
+.download-popup-modal .modal-body img {
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}

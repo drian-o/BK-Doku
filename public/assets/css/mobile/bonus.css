@@ -1,0 +1,339 @@
+body[data-route="bonus"] .standard-form-container,
+body[data-route="commission"] .standard-form-container,
+body[data-route="cashback"] .standard-form-container,
+body[data-route="combine-promo"] .standard-form-container {
+    background: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -15px;
+}
+.claim-filter-container {
+    display: flex;
+}
+.claim-filter-container > div {
+    flex: 1;
+}
+.claim-filter-container > div + div {
+    padding-left: 15px;
+}
+.eligible-desc-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+span[data-eligible-status]:before {
+    background-color: #00f;
+    display: inline-block;
+    content: " ";
+    border-radius: 15px;
+    width: 35px;
+    height: 7px;
+}
+span[data-eligible-status="Yes"]:before {
+    background-color: #1f0;
+}
+span[data-eligible-status="No"]:before {
+    background-color: #f00;
+}
+span[data-eligible-status="Maybe"]:before {
+    background-color: #f80;
+}
+.claim-item-container {
+    margin-top: 20px;
+}
+.claim-item-type {
+    display: flex;
+    justify-content: flex-end;
+}
+.claim-item-type span {
+    background-color: #1f1f1f;
+    position: relative;
+    text-transform: uppercase;
+    padding: 5px 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0 0 0/75%);
+    -moz-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 20px 5px rgba(0 0 0/75%);
+}
+.claim-item {
+    background-color: #1f1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    position: relative;
+}
+.claim-item .claim-title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(320, 43%, 99%);
+}
+.claim-item .claim-title:not(:first-child) {
+    margin-top: 10px;
+}
+.claim-item .claim-title .expiration-info {
+    display: flex;
+    align-items: center;
+}
+.claim-item .claim-title .expiration-info:first-child {
+    margin-left: auto;
+}
+.claim-item .claim-title .expiration-note {
+    color: #ff0;
+    display: block;
+    font-style: italic;
+}
+.claim-item .claim-title .auto-renewal {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.claim-item .claim-title .auto-renewal input[type="radio"] {
+    margin: 0 3px 0 6px;
+}
+.claim-item .claim-title .eligible-status {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    background: center no-repeat;
+    background-image: var(--image-src);
+    background-size: contain;
+}
+.claim-item .claim-details {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #fff;
+}
+.claim-item .claim-progress-info {
+    text-align: center;
+}
+.claim-item .claim-action-container {
+    text-align: center;
+}
+.claim-item .link-container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.claim-item .link-container span + span {
+    margin-left: 10px;
+}
+.bonus-progress {
+    padding: 8px;
+    margin-top: 15px;
+    background-color: #d5d5d5;
+    background: linear-gradient(
+        to bottom,
+        #d5d5d5 0%,
+        #f5f5f5 47%,
+        #d5d5d5 100%
+    );
+    box-shadow: 1px 1px 1px rgba(68, 68, 68, 0.6);
+    border-radius: 50px;
+}
+.bonus-progress .progress,
+.bonus-progress .progress-bar {
+    height: 15px;
+    border-radius: 25px;
+}
+.bonus-progress .progress {
+    background-color: #555;
+    margin: 0;
+}
+.progress-percentage {
+    color: #5e5e5e;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+.progress-percentage i {
+    font-style: normal;
+    color: #26de7f;
+}
+.claim-info-modal {
+    font-size: 13px;
+}
+.claim-info-modal h4 {
+    font-size: 20px;
+    color: #454545;
+    margin: 0;
+}
+.claim-item .btn + .btn {
+    margin-left: 10px;
+}
+.claim-item .claim-button,
+.claim-item .activation-button,
+.claim-item .cancellation-button,
+.claim-item .expiration-button,
+.claim-item .info-button {
+    background-color: #1bb99c;
+    color: #fff;
+}
+.claim-item .claim-button {
+    border: 1px solid #e4ff23;
+    color: #000;
+    background: #00ff23;
+    background: -moz-linear-gradient(top, #00ff23 0%, #009d16 100%);
+    background: -webkit-linear-gradient(top, #00ff23 0%, #009d16 100%);
+    background: linear-gradient(to bottom, #00ff23 0%, #009d16 100%);
+}
+.claim-item .claim-button:hover,
+.claim-item .activation-button:hover,
+.claim-item .cancellation-button:hover,
+.claim-item .expiration-button:hover {
+    background-color: #454545;
+}
+.claim-item .info-button {
+    background-color: #414243;
+}
+.claim-item .info-button:hover {
+    background-color: #414243;
+}
+.bonus-slider-modal .modal-dialog {
+    width: 400px;
+}
+.bonus-slider-modal .modal-header {
+    border-bottom: 0;
+}
+.bonus-slider-modal .modal-title i {
+    margin-right: 10px;
+}
+.bonus-slider-modal .modal-body {
+    background-color: #171717;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.bonus-slider-modal .modal-footer {
+    background-color: #171717;
+    text-align: center;
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.bonus-slider-modal .activation-button,
+.bonus-slider-modal .close-button {
+    background-color: #18a600;
+    color: #fff;
+    min-width: 30%;
+    font-size: 18px;
+}
+.bonus-slider-modal .close-button {
+    background-color: #454545;
+}
+.bonus-slider-modal .bonus-form {
+    background-color: #202020;
+    color: #dad9d9;
+    border-radius: 5px;
+    border-top: 2px solid #8c8c8c;
+    padding: 10px 10px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.bonus-slider-modal .bonus-heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.bonus-controls-field {
+    display: flex;
+    justify-content: space-between;
+    font-family: "BebasNeueRegular";
+    margin-bottom: 30px;
+}
+.bonus-controls-field .bonus-control-button {
+    font-size: 16px;
+    line-height: 40px;
+    background-color: #e4e4e4;
+    color: #525252;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.bonus-controls-field .bonus-control-button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.bonus-controls-field .bonus-control-button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.bonus-controls-field .bonus-amount {
+    flex-grow: 1;
+    font-size: 32px;
+    line-height: 40px;
+    background-color: #0e0e0e;
+    color: #ff9d00;
+    text-align: center;
+}
+.bonus-controls-field .bonus-amount label {
+    margin: 5px 0;
+}
+.bonus-form-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.bonus-form-footer > div:first-child,
+.bonus-form-footer > div:last-child {
+    width: 20%;
+}
+.bonus-form-footer > div:first-child {
+    text-align: left;
+}
+.bonus-form-footer > div:last-child {
+    text-align: right;
+}
+.bonus-range {
+    padding: 20px 0;
+}
+.bonus-range .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.bonus-range .range-wrap {
+    position: relative;
+    width: calc(100% - 15px);
+    margin: 0 auto;
+}
+.bonus-range .range {
+    width: 100%;
+    cursor: col-resize;
+}
+.bonus-range .bubble {
+    color: #fff;
+    padding: 4px 12px;
+    position: absolute;
+    transform: translateX(-50%);
+    border: 2px solid #e99a01;
+    background: #0e0e0e;
+    top: -40px;
+}
+.bonus-range .bubble::before,
+.bonus-range .bubble::after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.bonus-range .bubble::before {
+    border-color: rgba(233, 154, 1, 0);
+    border-top-color: #e99a01;
+    border-width: 8px;
+    margin-left: -8px;
+}
+.bonus-range .bubble::after {
+    border-color: rgba(14, 14, 14, 0);
+    border-top-color: #0e0e0e;
+    border-width: 5px;
+    margin-left: -5px;
+}

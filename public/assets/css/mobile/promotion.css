@@ -1,0 +1,137 @@
+.promotion-selection {
+    font-size: 12px;
+    margin: 15px 0 5px;
+    padding-bottom: 10px;
+    overflow: auto;
+    display: flex;
+}
+.promotion-selection a,
+.promotion-selection a:hover {
+    text-decoration: none;
+}
+.promotion-selection a {
+    background-color: #1d1d1e;
+    color: #9694a0;
+    white-space: nowrap;
+    border-radius: 20px;
+    padding: 6px 14px;
+}
+.promotion-selection a + a {
+    margin-left: 15px;
+}
+.promotion-selection a[data-active="true"] {
+    background-color: #1d1d1e;
+    color: #fff;
+}
+.promotion-list {
+    margin: 16px 0;
+}
+.promotion-item {
+    position: relative;
+    min-height: 150px;
+    background-color: #1d1d1e;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.promotion-item + .promotion-item {
+    margin-top: 15px;
+}
+.promotion-item img {
+    width: 100%;
+}
+.promotion-item .button-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.promotion-item .button-container div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    justify-content: right;
+}
+.promotion-item .button-container .promotion-label {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.promotion-item .button-container .promotion-label h2,
+.promotion-item .button-container .promotion-label h3 {
+    margin: 0;
+    color: #fff;
+}
+.promotion-item .button-container .promotion-label h2 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.promotion-item .button-container .promotion-label h3 {
+    font-size: 12px;
+    font-weight: 500;
+}
+.promotion-item .button-container .promotion-label h3 span {
+    color: #acabaa;
+    font-weight: 400;
+}
+.promotion-item .button-container .expiration-info {
+    font-size: 12px;
+}
+.promotion-item .button-container .click-for-get-promo-button {
+    font-size: 10px;
+    background-color: #ca1773;
+    color: inherit;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.promotion-item .button-container .click-for-more-info-button {
+    font-size: 10px;
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+body[data-route="promotion/details"] {
+    background-color: #c0c0c0;
+}
+.promotion-info {
+    color: #2e2e2e;
+}
+.promotion-info img {
+    width: 100%;
+}
+.promotion-info h2 {
+    text-align: center;
+    padding: 20px 0 15px;
+    font-size: 24px;
+}
+.promotion-info .expiration-countdown-container {
+    display: flex;
+    justify-content: center;
+}
+.promotion-info .promotion-content {
+    padding: 25px;
+}
+.promotion-info ul,
+.promotion-info ol {
+    margin: 10px 0 10px 30px;
+}
+.promotion-info ul {
+    list-style: disc;
+}
+.promotion-info ol {
+    list-style: decimal;
+}

@@ -1,0 +1,163 @@
+.promotion-side-menu,
+.promotion-list {
+    background-color: #131313;
+    border-radius: 15px;
+    border: 1px solid #131313;
+}
+.promotion-side-menu > h5 {
+    color: #10a29b;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+.promotion-side-menu > a {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #131313;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 17px;
+    border-left: 4px solid transparent;
+}
+.promotion-side-menu > a[data-active="true"],
+.promotion-side-menu > a:hover {
+    background-color: #222222;
+    border-left-color: #302d2f;
+}
+.promotion-side-menu > a [data-icon] {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px 0 20px;
+    background: center no-repeat;
+    background-image: var(--image-src);
+    background-position: -21px -404px;
+}
+.promotion-side-menu > a[data-active="true"] [data-icon] {
+    background-position-x: -81px;
+}
+.promotion-side-menu > a [data-icon="all"] {
+    background-position-y: -24px;
+}
+.promotion-side-menu > a [data-icon="special"] {
+    background-position-y: -81px;
+}
+.promotion-side-menu > a [data-icon="new member"] {
+    background-position-y: -135px;
+}
+.promotion-side-menu > a [data-icon="sports"] {
+    background-position-y: -189px;
+}
+.promotion-side-menu > a [data-icon="live casino"] {
+    background-position-y: -242px;
+}
+.promotion-side-menu > a [data-icon="arcade"] {
+    background-position-y: -353px;
+}
+.promotion-side-menu > a [data-icon="poker"] {
+    background-position-y: -298px;
+}
+.promotion-side-menu > a [data-icon="slots"] {
+    background-position-y: -440px;
+}
+.promotion-list {
+    padding: 20px;
+}
+.promotion-list .expiration-countdown-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.promotion-item + .promotion-item {
+    margin-top: 15px;
+}
+.promotion-item {
+    min-height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #1e1c1f;
+}
+.promotion-item img {
+    width: 100%;
+}
+.promotion-item .promotion-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+.promotion-item .promotion-footer div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    justify-content: right;
+}
+.promotion-item .promotion-footer .promotion-label {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.promotion-item .promotion-footer .promotion-label h2,
+.promotion-item .promotion-footer .promotion-label h3 {
+    margin: 0;
+    color: #fff;
+}
+.promotion-item .promotion-footer .promotion-label h2 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.promotion-item .promotion-footer .promotion-label h3 {
+    font-size: 14px;
+    font-weight: 500;
+}
+.promotion-item .promotion-footer .promotion-label h3 span {
+    color: #acabaa;
+    font-weight: 400;
+}
+.promotion-item .click-for-get-promo-button {
+    background: none;
+    border: 1px solid;
+    background-color: #c9176b;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    border-radius: 25px;
+    white-space: nowrap;
+}
+
+.promotion-item .click-for-more-info-button {
+    background: none;
+    border: 1px solid;
+    background-color: transparent;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    border-radius: 25px;
+    white-space: nowrap;
+}
+.promotion-item .click-for-more-info-button {
+    background-color: rgb(13, 144, 98);
+}
+.promotion-item ul,
+.promotion-item ol {
+    margin: 10px 0 10px 30px;
+}
+.promotion-item ul {
+    list-style: disc;
+}
+.promotion-item ol {
+    list-style: decimal;
+}
+.promotion-item h3 {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    font-weight: 700;
+}

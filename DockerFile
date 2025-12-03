@@ -1,0 +1,72 @@
+# Tahap 1: Build Stage (Untuk instalasi Composer)
+
+FROM composer:2 AS build
+WORKDIR /app
+
+# Salin SEMUA file, termasuk migrations, sebelum menjalankan Composer
+
+COPY . /app
+
+# Instal dependensi PHP (hanya produksi)
+
+RUN composer install --ignore-platform-reqs --no-dev --optimize-autoloader --no-interaction
+
+# Tahap 2: Final Runtime Stage (Hanya aplikasi yang dibutuhkan)
+
+FROM php:8.2-fpm-alpine
+
+# Instal dependensi sistem yang diperlukan untuk menjalankan Laravel
+
+RUN apk add --no-cache 
+
+nginx 
+
+git 
+
+curl 
+
+supervisor 
+
+libxml2-dev 
+
+openssl 
+
+oniguruma 
+
+zip 
+
+unzip 
+
+bash 
+
+# Tetapkan Working Directory
+&& docker-php-ext-install pdo_mysql exif pcntl bcmath opcache sockets
+
+*** PERBAIKAN 1: TINGKATKAN BATAS MEMORI UNTUK MENGATASI 504 ***
+
+RUN echo 'memory_limit = 512M' > /usr/local/etc/php/conf.d/zz-memory-limit.ini
+
+# Tetapkan Working Directory
+
+WORKDIR /app
+
+# Salin VENDOR dari build stage
+COPY --from=build /app/vendor /app/vendor
+
+# Salin SEMUA file aplikasi dari host (termasuk folder database/migrations)
+
+COPY . /app
+
+# Atur izin folder (penting)
+
+RUN chown -R www-data:www-data /app/storage 
+
+&& chown -R www-data:www-data /app/bootstrap/cache
+
+# Expose Port 8000
+
+EXPOSE 8000
+
+*** PERBAIKAN 2: GUNAKAN STARTUP COMMAND YANG STABIL ***
+
+CMD php artisan serve --host=0.0.0.0 --port=8000 & tail -f /dev/null
