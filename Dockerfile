@@ -59,4 +59,9 @@ EXPOSE 8000
 # PERBAIKAN 2: GUNAKAN STARTUP COMMAND YANG BENAR-BENAR STABIL
 # Jangan gunakan '& tail -f /dev/null' di production karena jika artisan serve mati, container tetap dikira hidup oleh Coolify.
 # Kita pastikan storage di-link dan cache dibersihkan setiap container baru menyala.
-CMD php artisan storage:link && php artisan config:cache && php artisan route:cache && php artisan serve --host=0.0.0.0 --port=8000
+# PERBAIKAN: Pastikan semua folder storage yang dibutuhkan Laravel TERBUAT otomatis
+CMD mkdir -p /app/storage/framework/sessions /app/storage/framework/views /app/storage/framework/cache \
+    && php artisan storage:link \
+    && php artisan config:cache \
+    && php artisan route:cache \
+    && php artisan serve --host=0.0.0.0 --port=8000
