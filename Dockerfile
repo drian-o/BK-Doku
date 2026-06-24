@@ -20,6 +20,7 @@ FROM php:8.2-fpm-alpine
 
 # Instal dependensi sistem yang diperlukan untuk menjalankan Laravel
 # PERBAIKAN SINTAKSIS: Menggunakan backslash (\) yang benar dan menggabungkan perintah dengan &&
+# Instal dependensi sistem yang diperlukan untuk menjalankan Laravel
 RUN apk add --no-cache \
     nginx \
     git \
@@ -31,6 +32,7 @@ RUN apk add --no-cache \
     zip \
     unzip \
     bash \
+    linux-headers \
     && docker-php-ext-install pdo_mysql exif pcntl bcmath opcache sockets
 
 # PERBAIKAN 1: TINGKATKAN BATAS MEMORI UNTUK MENGATASI 504
