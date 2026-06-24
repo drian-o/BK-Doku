@@ -67,8 +67,12 @@ class DashboardController extends Controller
             ->where('status_id', 1)
             ->count();
 
-        $SG = new fiver();
+      $SG = new fiver();
         $act = json_decode($SG->agentbalance());
+
+        // BYPASS: Gunakan Nullsafe operator (?->) dan Null coalescing (??)
+        // Kalau API mati/error, saldo otomatis dianggap 0 dan halaman tidak akan crash.
+        $agentBalance = $act?->agent?->balance ?? 0;
 
         $agentBalance = $act->agent->balance;
         $Game = Game::where('game_category', 'SL')->count();
