@@ -49,7 +49,8 @@ COPY . /app
 
 # Atur izin folder (Sangat Penting untuk Laravel di Linux)
 # PERBAIKAN SINTAKSIS: Memperbaiki pemisah perintah agar tidak error saat build
-RUN chown -R www-data:www-data /app/storage /app/bootstrap/cache \
+RUN mkdir -p /app/storage /app/bootstrap/cache \
+    && chown -R www-data:www-data /app/storage /app/bootstrap/cache \
     && chmod -R 775 /app/storage /app/bootstrap/cache
 
 # Expose Port 8000
